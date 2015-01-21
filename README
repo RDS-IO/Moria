@@ -8,6 +8,11 @@ Labor Resource Management
 1. Colorful view for Labor activities, easier for manager to control different labor's schedule.
 	
    Please reference "Labor View.png" for the reference.
+	https://github.com/EtuBoy/Etu-Moria/blob/master/reference/LaborView.png
+
+   For example, one color repersent as one people.
+   if her/her is busy/has event, mark on the calendar. Otherwise, it's blank.  
+
 
 2. "Blood" system,reference from Diablo, which could provide team health for up coming requests.
 	http://goo.gl/mjzz4y
