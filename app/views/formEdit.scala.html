@@ -5,7 +5,21 @@
 @implicitField = @{ FieldConstructor(fields.twoColumns.f) }
 
 @layouts.mainLayout("Edit event: "+ event.title){
+
+ <link rel="stylesheet" href="@routes.Assets.at("stylesheets/jquery.datetimepicker.css")">
+ <script type="text/javascript" src="@routes.Assets.at("javascripts/jquery.datetimepicker.js")"></script>
+
+<script>
+  $(function() {
+    $( "#datetimepickerS" ).datetimepicker();
+    $( "#datetimepickerE" ).datetimepicker();
+  });
+</script>
+
 <div class="container">
+
+
+    <!-- <p>datetime:  <input id="datetimepicker" type="text" ></p> -->
 
     <h3>Edit event: @event.title </h3>
 
@@ -20,7 +34,8 @@
         )
 
         @checkbox(field = eventForm("allDay"), args =
-            '_label -> "All day event?"
+            '_label -> "All day event?",
+	    'value -> 0
         )
 
         @inputText(eventForm("start"), args =
@@ -29,6 +44,7 @@
             'size ->18,
             'placeholder -> "dd.mm.yyyy hh:mm",
             'placeholder -> "dd.mm.yyyy",
+	    'id -> "datetimepickerS",
             'class -> "required"
         )
 
@@ -36,7 +52,8 @@
             '_label -> "End date",
             '_help -> "",
             'size ->18,
-            'placeholder -> "dd.mm.yyyy hh:mm"
+            'placeholder -> "dd.mm.yyyy hh:mm",
+	    'id -> "datetimepickerE"
         )
 
         <div class="row" id="rowOf_submitbuttons">
