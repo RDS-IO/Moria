@@ -1,7 +1,7 @@
 import sbt.Keys._
 import play.PlayJava
 
-name := """myClendar-play2.3"""
+name := """Etu-Moria"""
 
 version := "1.0-SNAPSHOT"
 
