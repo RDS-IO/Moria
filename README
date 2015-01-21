@@ -1,4 +1,48 @@
-This is your new Play application
-=================================
 
-This file will be packaged with your application, when using `activator dist`.
+This Project is reference from Play 20 sample Full Calendar
+
+Project Purpose:
+
+Labor Resource Management 
+
+1. Colorful view for Labor activities, easier for manager to control different labor's schedule.
+	
+   Please reference "Labor View.png" for the reference.
+
+2. "Blood" system,reference from Diablo, which could provide team health for up coming requests.
+	http://goo.gl/mjzz4y
+
+   For example, one labor have 40 working hours/week.
+	if he/her has 4 tasks and occupied 28 hours, the blood will down to 30%.  		
+
+3. Team leader have "Eagle View" for all team members.
+
+REFERENCE: https://github.com/biesior/Play-20-Sample-FullCalendar-Java
+
+This is sample application for Play Framework 2.0 (Java version)
+================================================================
+
+Current description can be always found at
+https://github.com/biesior/Play-20-Sample-FullCalendar-Java/wiki
+
+Running/starting sample
+================================================================
+I assume that you have downloaded and installed Play 2.0
+http://www.playframework.org/documentation/2.0/Installing
+
+All you need to do is cd to cloned folder and run application in dev mode:
+
+    bash#: play run
+
+as by default sample uses in mem H2 DB it will ask you for applying evolutions
+(it will recreate all structure with no events after each app re-run!)
+
+To switch to more stable DB ie. MySQL edit /conf/application.conf and uncoment
+mysql config (lines #27 - #30) and of course set proper values for db name
+(must exist, currently 'play-fullcalendar-sample'), user and password.
+
+There is configured mysql-connector in apps dependencies, you can remove it
+if you do not want to use MySQL DB in /project/Build.scala
+
+
+
